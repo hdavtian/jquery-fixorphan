@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Plugin - Fixorphan</title>
+
+    <link rel="stylesheet" href="fixorphan.css">
+
+</head>
+<body>
+
+<div style="width:60%; margin: 0 auto">
+
+    <h2>Jquery Fixorphan plugin</h2>
+
+    <p>Have you ever had your ux or marketing groups make a fuss about orphan words on your websites at the end of paragraphs and no amount of explanation is ever good enough right? Well, I wrote this plugin as a fix the problem for the orphan word haters I could programmatically ensure there would not be any orphan words.</p>
+
+    <p class="my-paragraph">On initial load or when you resize the browser window, this block of content will not have an orphan word on the last line. This is simply achieved by wrapper the last few words (you can specify how many words) of this paragraph with a span with class .nowrap which applies this css rule <code>white-space: no-wrap</code>. This paragraph will never end with a single word on the last line, go ahead and try it!</p>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="jquery.fixorphan-1.0.0.js"></script>
+
+<script>
+    $('.my-paragraph').fixorphan({numLastWords: 3});
+</script>
+
+</body>
+</html>
